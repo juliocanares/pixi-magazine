@@ -15,6 +15,12 @@ module.exports = function (grunt) {
                 src: srcFiles,
                 dest: './public/game.dev.js'
             }
+        },
+        uglify: {
+            dist: {
+                src: './public/game.dev.js',
+                dest: './public/game.min.js'
+            }
         }
     });
     
