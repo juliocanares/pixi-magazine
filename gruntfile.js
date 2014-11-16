@@ -69,5 +69,6 @@ module.exports = function (grunt) {
 
     grunt.registerTask('default', ['concat', 'uglify']);
     grunt.registerTask('watched', ['watch']);
+    grunt.registerTask('imagemined', ['imagemin']);
 
 };
