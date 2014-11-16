@@ -21,6 +21,15 @@ module.exports = function (grunt) {
                 src: './public/game.dev.js',
                 dest: './public/game.min.js'
             }
+        },
+        watch: {
+            js: {
+                files: srcFiles,
+                tasks: ['concat', 'uglify'],
+                options: {
+                    livereload: true
+                }
+            }
         }
     });
     
