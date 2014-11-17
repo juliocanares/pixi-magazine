@@ -4,7 +4,7 @@
  */
 
 module.exports = function (grunt) {
-    var srcFiles = ['./game/src/**/*.js'];
+    var srcFiles = ['./app/src/**/*.js'];
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         concat: {
@@ -13,13 +13,13 @@ module.exports = function (grunt) {
             },
             dist: {
                 src: srcFiles,
-                dest: './public/game.dev.js'
+                dest: './public/app.dev.js'
             }
         },
         uglify: {
             dist: {
-                src: './public/game.dev.js',
-                dest: './public/game.min.js'
+                src: './public/app.dev.js',
+                dest: './public/app.min.js'
             }
         },
         watch: {
