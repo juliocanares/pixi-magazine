@@ -13,13 +13,13 @@ module.exports = function (grunt) {
             },
             dist: {
                 src: srcFiles,
-                dest: './public/app.dev.js'
+                dest: './public/js/app.dev.js'
             }
         },
         uglify: {
             dist: {
-                src: './public/app.dev.js',
-                dest: './public/app.min.js'
+                src: './public/js/app.dev.js',
+                dest: './public/js/app.min.js'
             }
         },
         watch: {
