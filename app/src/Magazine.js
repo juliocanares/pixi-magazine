@@ -19,3 +19,8 @@ APP.Magazine = function () {
 };
 
 APP.Magazine.prototype = Object.create(Object.prototype);
+
+APP.Magazine.prototype.update = function () {
+    requestAnimationFrame(this.update.bind(this));
+    this.renderer.render(this.stage)
+};
