@@ -94,3 +94,12 @@ APP.SceneModel = function () {
         }
     ]
 };
+
+APP.SceneModel.prototype.getDataFromId = function (id) {
+    for (var i = this.data.length - 1; i >= 0; i--) {
+        if (this.data[i].id == id)return this.data[i];
+    }
+    return this.data[0];
+};
+
+
