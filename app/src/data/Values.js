@@ -10,5 +10,6 @@ APP.Values = function () {
 
 };
 
+APP.Values.remoteServer = "";
 
 APP.Values.pathImages = APP.Values.remoteServer + "img/";
