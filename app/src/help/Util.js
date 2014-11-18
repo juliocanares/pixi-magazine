@@ -93,3 +93,22 @@ Util.removeThis = function (obj) {
 Util.canFullScreeen = function () {
     return document.body.mozRequestFullScreen || document.body.webkitRequestFullScreen || document.body.webkitRequestFullScreen;
 };
+
+Util.iOSversion = function () {
+    if (/iP(hone|od|ad)/.test(navigator.platform)) {
+        var a = navigator.appVersion.match(/OS (\d+)_(\d+)_?(\d+)?/);
+        return[parseInt(a[1], 10), parseInt(a[2], 10), parseInt(a[3] || 0, 10)]
+    }
+};
+
+Util.getInternetExplorerVersion = function () {
+    var a = -1;
+    if ("Microsoft Internet Explorer" == navigator.appName) {
+        var b = navigator.userAgent, c = new RegExp("MSIE ([0-9]{1,}[.0-9]{0,})");
+        null != c.exec(b) && (a = parseFloat(RegExp.$1))
+    } else if ("Netscape" == navigator.appName) {
+        var b = navigator.userAgent, c = new RegExp("Trident/.*rv:([0-9]{1,}[.0-9]{0,})");
+        null != c.exec(b) && (a = parseFloat(RegExp.$1))
+    }
+    return a
+};
