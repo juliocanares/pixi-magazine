@@ -35,3 +35,16 @@ Util.randomRange = function (b, a) {
     return Math.floor(Util.floatRand(b, a))
 };
 
+
+Util.createSprite = function (c, b, a, e) {
+    var d = new PIXI.Sprite(PIXI.Texture.fromFrame(c));
+    d.name = b;
+    if (a) {
+        d.setInteractive(true);
+        d.buttonMode = true;
+        if (e != null) {
+            d.click = d.tap = e;
+        }
+    }
+    return d
+};
