@@ -61,3 +61,8 @@ Util.createSpriteFromImage = function (c, b, a, e) {
     }
     return d
 };
+
+Util.centerToContainer = function (target, bound) {
+    target.position.x = bound.width * .5 - target.width * .5;
+    target.position.y = bound.height * .5 - target.height * .5;
+};
