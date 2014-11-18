@@ -89,3 +89,7 @@ Util.removeThis = function (obj) {
     }
 };
 
+
+Util.canFullScreeen = function () {
+    return document.body.mozRequestFullScreen || document.body.webkitRequestFullScreen || document.body.webkitRequestFullScreen;
+};
