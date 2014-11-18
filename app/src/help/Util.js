@@ -26,3 +26,12 @@ Util.floatRand = function (b, a) {
     }
     return Math.random() * (a - b) + b
 };
+
+Util.randomRange = function (b, a) {
+    if (isNaN(a)) {
+        a = b;
+        b = 0
+    }
+    return Math.floor(Util.floatRand(b, a))
+};
+
