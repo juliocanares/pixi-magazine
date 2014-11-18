@@ -48,3 +48,16 @@ Util.createSprite = function (c, b, a, e) {
     }
     return d
 };
+
+Util.createSpriteFromImage = function (c, b, a, e) {
+    var d = new PIXI.Sprite(PIXI.Texture.fromImage(c));
+    d.name = b;
+    if (a) {
+        d.setInteractive(true);
+        d.buttonMode = true;
+        if (e != null) {
+            d.click = d.tap = e;
+        }
+    }
+    return d
+};
