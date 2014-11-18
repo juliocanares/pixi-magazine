@@ -103,3 +103,9 @@ APP.SceneModel.prototype.getDataFromId = function (id) {
 };
 
 
+APP.SceneModel.prototype.getDataFromName = function (name) {
+    for (var i = this.data.length - 1; i >= 0; i--) {
+        if (this.data[i].name == name)return this.data[i];
+    }
+    return this.data[0];
+};
