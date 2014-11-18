@@ -75,3 +75,9 @@ Util.intersects = function (object1, object2) {
     }
     return isCollision;
 };
+
+Util.createText = function (b, a) {
+    var c = new PIXI.Text(b, a);
+    c.anchor.x = c.anchor.y = 0.5;
+    return c
+};
