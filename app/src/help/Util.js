@@ -81,3 +81,11 @@ Util.createText = function (b, a) {
     c.anchor.x = c.anchor.y = 0.5;
     return c
 };
+
+Util.removeThis = function (obj) {
+    if (obj && obj.parent) {
+        obj.parent.removeChild(obj);
+        obj = null;
+    }
+};
+
