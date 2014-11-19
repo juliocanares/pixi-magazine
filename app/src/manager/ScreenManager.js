@@ -39,6 +39,11 @@ APP.ScreenManager.prototype.setupListeners = function () {
     Broadcaster.dispatch('GO_SCREEN_CHANGE');
 
 };
+APP.ScreenManager.prototype.goScreenCleanHandler = function () {
+    if (this.currentScreen) {
+        this.currentScreen.destroy();
+    }
+};
 
 APP.ScreenManager.prototype.goScreenChangeHandler = function () {
     Broadcaster.dispatch('GO_SCREEN_CLEAN');
