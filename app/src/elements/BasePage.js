@@ -47,6 +47,29 @@ APP.BasePage.prototype.animationOut = function () {
 
 };
 
+APP.BasePage.prototype.resize = function () {
+
+    var a = stageW;
+    var b = stageH;
+
+    var c = b / stageHBase > a / stageWBase ? a / stageWBase : b / stageHBase;
+
+    var d = 1.3;
+
+    c > d && (c = d);
+
+    this.scale.x = c;
+    this.scale.y = c;
+
+    this.position.x = a / 2 - stageWBase * c / 2;
+    this.position.y = stageOffSetY + b / 2 - stageHBase * c / 2;
+
+    if (this.preloader) {
+        this.preloader.position.x = stageWBase * .5 - 200;
+        this.preloader.position.y = stageHBase * .5 - 240;
+    }
+
+};
 
 APP.BasePage.prototype.getAsset = function (name, id) {
     var value = "";
