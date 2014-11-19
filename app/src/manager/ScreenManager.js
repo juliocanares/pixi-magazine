@@ -62,6 +62,11 @@ APP.ScreenManager.prototype.goScreenChangeHandler = function () {
     this.screenContainer.addChild(this.currentScreen);
 };
 
+APP.ScreenManager.prototype.resize = function () {
+    if (this.currentScreen)
+        this.currentScreen.resize();
+};
+
 Object.defineProperty(APP.ScreenManager.prototype, "currentScreenID", {
         get: function () {
             return this._currentScreenID;
