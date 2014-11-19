@@ -19,7 +19,14 @@ APP.ScreenManager = function () {
     this.screens = [APP.Page1 , APP.Page2, APP.Page3, APP.Page4, APP.Page5 , APP.Page6, APP.Page7 , APP.Page8, APP.Page9, APP.Page10, APP.Page11];
 
     this.currentScreenID = 0;
+
+    this.setupListeners();
+
 };
 APP.ScreenManager.prototype = Object.create(PIXI.DisplayObjectContainer.prototype);
 
 APP.ScreenManager.constructor = APP.ScreenManager;
+
+APP.ScreenManager.prototype.setupListeners = function () {
+
+};
