@@ -19,8 +19,19 @@ APP.BasePage = function (id) {
 
     this.preloader = new APP.Preloader();
     this.addChild(this.preloader);
+    this.loadAsset();
 };
 
 APP.BasePage.constructor = APP.BasePage;
 
 APP.BasePage.prototype = Object.create(PIXI.DisplayObjectContainer.prototype);
+
+APP.BasePage.prototype.loadAsset = function () {
+    this.loader = new PIXI.AssetLoader(this.textures);
+    var scope = this;
+    this.loader.addEventListener("onComplete", function () {
+        scope.removeChild(scope.preloader);
+        scope.start();
+    });
+    this.loader.load();
+};
