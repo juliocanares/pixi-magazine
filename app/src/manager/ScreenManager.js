@@ -61,3 +61,32 @@ APP.ScreenManager.prototype.goScreenChangeHandler = function () {
     this.currentScreen.resize();
     this.screenContainer.addChild(this.currentScreen);
 };
+
+Object.defineProperty(APP.ScreenManager.prototype, "currentScreenID", {
+        get: function () {
+            return this._currentScreenID;
+        },
+        set: function (value) {
+            this._currentScreenID = value;
+
+            this.canChangeScreen = !(this._currentScreenID < 0 || this._currentScreenID > this.screens.length - 1);
+
+            if (this._currentScreenID <= 0) {
+                this._currentScreenID = 0;
+                APP.Magazine.instance.arrowsManager.leftArrow.visible = false;
+            } else {
+                APP.Magazine.instance.arrowsManager.leftArrow.visible = true;
+            }
+
+            if (this._currentScreenID >= this.screens.length - 1) {
+                this._currentScreenID = this.screens.length - 1;
+                APP.Magazine.instance.arrowsManager.rightArrow.visible = false;
+            } else {
+                APP.Magazine.instance.arrowsManager.rightArrow.visible = true;
+            }
+
+            if (this.canChangeScreen)
+                Broadcaster.dispatch('GO_SCREEN_CHANGE');
+
+        }}
+);
