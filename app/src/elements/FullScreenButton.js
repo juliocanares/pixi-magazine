@@ -22,3 +22,7 @@ APP.FullScreenButton = function (a, b, c, d) {
 
     }
 };
+
+APP.FullScreenButton.prototype.fullScreenToggle = function () {
+    this.f ? document.mozCancelFullScreen ? document.mozCancelFullScreen() : document.webkitCancelFullScreen ? document.webkitCancelFullScreen() : document.cancelFullScreen() : document.body.mozRequestFullScreen ? document.body.mozRequestFullScreen() : document.body.webkitRequestFullScreen && document.body.webkitRequestFullScreen()
+};
