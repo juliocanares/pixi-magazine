@@ -47,6 +47,16 @@ APP.BasePage.prototype.animationOut = function () {
 
 };
 
+
+APP.BasePage.prototype.getAsset = function (name, id) {
+    var value = "";
+    if (id != null)
+        value = APP.Values.pathImages + id + '/' + name;
+    else
+        value = APP.Values.pathImages + this.id + '/' + name;
+    return value;
+};
+
 APP.BasePage.prototype.destroy = function () {
 
 };
