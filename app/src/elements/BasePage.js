@@ -8,6 +8,15 @@ var APP = APP || {};
 APP.BasePage = function (id) {
     PIXI.DisplayObjectContainer.call(this);
 
+    this.id = id;
+
+    this.data = APP.SceneModel.instance.getDataFromName(this.id);
+
+    this.textures = [];
+
+    for (var i = 0; i < this.data.textures.length; i++)
+        this.textures[i] = APP.Values.pathImages + this.id + '/' + this.data.textures[i];
+
 };
 
 APP.BasePage.constructor = APP.BasePage;
