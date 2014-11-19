@@ -29,4 +29,13 @@ APP.ScreenManager.constructor = APP.ScreenManager;
 
 APP.ScreenManager.prototype.setupListeners = function () {
 
+    this.canChangeScreen = true;
+
+    this.goScreenCleanHandlerBind = this.goScreenCleanHandler.bind(this);
+    this.goScreenChangeHandlerBind = this.goScreenChangeHandler.bind(this);
+
+    Broadcaster.listen('GO_SCREEN_CLEAN', this.goScreenCleanHandlerBind);
+    Broadcaster.listen('GO_SCREEN_CHANGE', this.goScreenChangeHandlerBind);
+    Broadcaster.dispatch('GO_SCREEN_CHANGE');
+
 };
