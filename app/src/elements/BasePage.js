@@ -17,9 +17,10 @@ APP.BasePage = function (id) {
     for (var i = 0; i < this.data.textures.length; i++)
         this.textures[i] = APP.Values.pathImages + this.id + '/' + this.data.textures[i];
 
+    this.preloader = new APP.Preloader();
+    this.addChild(this.preloader);
 };
 
 APP.BasePage.constructor = APP.BasePage;
 
 APP.BasePage.prototype = Object.create(PIXI.DisplayObjectContainer.prototype);
-
