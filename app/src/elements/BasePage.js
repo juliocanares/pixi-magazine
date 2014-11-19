@@ -35,3 +35,18 @@ APP.BasePage.prototype.loadAsset = function () {
     });
     this.loader.load();
 };
+
+APP.BasePage.prototype.start = function () {
+};
+
+APP.BasePage.prototype.animationIn = function () {
+
+};
+
+APP.BasePage.prototype.animationOut = function () {
+
+};
+
+APP.BasePage.prototype.destroy = function () {
+
+};
