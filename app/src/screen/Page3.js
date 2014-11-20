@@ -55,3 +55,34 @@ APP.Page3.prototype.buildView = function () {
 
     this.animIn();
 };
+
+APP.Page3.prototype.animIn = function () {
+    TweenMax.to(this.title.position, .5, {x: 50, ease: Cubic.easeInOut});
+    TweenMax.to(this.title, .5, {alpha: 1, ease: Cubic.easeInOut});
+
+
+    TweenMax.to(this.plus.position, .5, {delay: .3, x: 210, ease: Cubic.easeInOut});
+    TweenMax.to(this.plus, .5, {delay: .3, alpha: 1, ease: Cubic.easeInOut, onComplete: $.proxy(function () {
+        TweenMax.to(this.plus, 1, {alpha: 0, repeat: -1, yoyo: true});
+    }, this)});
+
+};
+
+APP.Page3.prototype.plusHandler = function () {
+    if (this.box.alpha == 0)
+        TweenMax.to(this.box, .5, {alpha: 1, ease: Cubic.easeInOut});
+};
+
+APP.Page3.prototype.minusHandler = function () {
+    TweenMax.to(this.box, .5, {alpha: 0, ease: Cubic.easeInOut});
+};
+
+APP.Page3.prototype.restart = function () {
+
+};
+
+
+APP.Page3.prototype.destroy = function () {
+    Util.removeAllChildrens(this, null);
+    Util.removeThis(this);
+};
