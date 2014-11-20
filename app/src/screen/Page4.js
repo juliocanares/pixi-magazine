@@ -74,3 +74,13 @@ APP.Page4.prototype.imageFadeInOut = function (target, complete) {
         TweenMax.to(target, 1, {delay: 2, alpha: 0, ease: Cubic.easeOut, onComplete: complete})
     }});
 };
+
+
+APP.Page4.prototype.restart = function () {
+
+};
+
+APP.Page4.prototype.destroy = function () {
+    Util.removeAllChildrens(this, null);
+    Util.removeThis(this);
+};
