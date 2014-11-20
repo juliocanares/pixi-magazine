@@ -106,3 +106,13 @@ APP.Page1.prototype.animIn = function () {
     // TODO ANIMATE IMAGES
 };
 
+
+APP.Page1.prototype.restart = function () {
+
+};
+
+
+APP.Page1.prototype.destroy = function () {
+    Util.removeAllChildrens(this, null);
+    Util.removeThis(this);
+};
