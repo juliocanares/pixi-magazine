@@ -19,3 +19,13 @@ APP.ArrowsManager = function () {
 };
 
 APP.ArrowsManager.prototype = Object.create(PIXI.DisplayObjectContainer.prototype);
+
+APP.ArrowsManager.prototype.resize = function () {
+
+    this.leftArrow.position.x = 40;
+    this.leftArrow.position.y = stageH / 2;
+
+    this.rightArrow.position.x = stageW - 40;
+    this.rightArrow.position.y = stageH / 2;
+
+};
