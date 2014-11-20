@@ -60,3 +60,9 @@ APP.Page2.prototype.animIn = function () {
         }, this));
     }, this));
 };
+
+APP.Page2.prototype.imageFadeInOut = function (target, complete) {
+    TweenMax.to(target, 1, {alpha: 1, ease: Cubic.easeInOut, onComplete: function () {
+        TweenMax.to(target, 1, {delay: 2, alpha: 0, ease: Cubic.easeOut, onComplete: complete})
+    }});
+};
