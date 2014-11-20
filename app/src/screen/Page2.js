@@ -86,3 +86,13 @@ APP.Page2.prototype.facebookHandler = function () {
 APP.Page2.prototype.playHandler = function () {
     $(".swipebox-page2").trigger("click");
 };
+
+APP.Page2.prototype.restart = function () {
+
+};
+
+
+APP.Page2.prototype.destroy = function () {
+    Util.removeAllChildrens(this, null);
+    Util.removeThis(this);
+};
