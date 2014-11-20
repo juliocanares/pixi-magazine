@@ -50,3 +50,13 @@ APP.Page2.prototype.buildView = function () {
 
     this.animIn();
 };
+
+APP.Page2.prototype.animIn = function () {
+    this.imageFadeInOut(this.image01, $.proxy(function () {
+        this.imageFadeInOut(this.image02, $.proxy(function () {
+            TweenMax.to(this.image03, 1, {alpha: 1, ease: Cubic.easeInOut, onComplete: $.proxy(function () {
+                this.animationLinks();
+            }, this)});
+        }, this));
+    }, this));
+};
