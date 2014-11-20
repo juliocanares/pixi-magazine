@@ -66,3 +66,11 @@ APP.Page2.prototype.imageFadeInOut = function (target, complete) {
         TweenMax.to(target, 1, {delay: 2, alpha: 0, ease: Cubic.easeOut, onComplete: complete})
     }});
 };
+
+APP.Page2.prototype.animationLinks = function () {
+    TweenMax.to(this.instagram, 1, {delay: .5, alpha: 1, ease: Cubic.easeInOut});
+    TweenMax.to(this.facebook, 1, {alpha: 1, ease: Cubic.easeInOut});
+    TweenMax.to(this.play, 1, {delay: 1.5, alpha: 1, ease: Cubic.easeInOut, onComplete: $.proxy(function () {
+        TweenMax.to(this.play, 1, {alpha: 0, repeat: -1, yoyo: true});
+    }, this)});
+};
