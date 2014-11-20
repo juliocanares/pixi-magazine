@@ -53,3 +53,19 @@ APP.HeaderManager = function () {
 
 APP.HeaderManager.constructor = APP.HeaderManager;
 APP.HeaderManager.prototype = Object.create(PIXI.DisplayObjectContainer.prototype);
+
+APP.HeaderManager.prototype.resize = function () {
+
+};
+
+APP.HeaderManager.prototype.onFacebookPressed = function () {
+    APP.Share.postToFacebook(
+        {
+            link: "http://www.juliocanares.com/lab/init/html5/web/revista/",
+            picture: "http://www.juliocanares.com/lab/init/html5/web/revista/img/ui/fish.png",
+            name: "Revista",
+            caption: "",
+            description: "revista"
+        }
+    );
+};
