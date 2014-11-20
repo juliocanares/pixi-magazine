@@ -83,3 +83,26 @@ APP.Page1.prototype.buildView = function () {
 
     this.animIn();
 };
+
+APP.Page1.prototype.animIn = function () {
+    TweenMax.to(this.image01.scale, 3, {x: 1.1, y: 1.1});
+    TweenMax.to(this.image02.position, 3, {x: "-=60", y: "+=60"});
+    TweenMax.to(this.image03.position, 3, {x: "+=120", onComplete: $.proxy(function () {
+        TweenMax.from(this.image04.position, .5, {x: -stageW});
+        TweenMax.to(this.image04, .5, {alpha: 1});
+
+        TweenMax.from(this.image05.position, .5, {delay: .3, x: -stageW});
+        TweenMax.to(this.image05, .5, {delay: .3, alpha: 1});
+
+        TweenMax.from(this.image06.position, .5, {delay: .7, x: -stageW});
+        TweenMax.to(this.image06, .5, {delay: .7, alpha: 1});
+
+
+        TweenMax.to(this.image07, .5, {delay: 1.2, alpha: 1});
+
+    }, this)});
+
+
+    // TODO ANIMATE IMAGES
+};
+
