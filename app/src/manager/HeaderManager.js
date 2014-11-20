@@ -69,3 +69,12 @@ APP.HeaderManager.prototype.onFacebookPressed = function () {
         }
     );
 };
+
+APP.HeaderManager.prototype.onTwitterPressed = function () {
+    APP.Share.postToTwitter(
+        {
+            link: "http://www.juliocanares.com/lab/init/html5/web/revista/",
+            text: "revista"
+        }
+    );
+};
