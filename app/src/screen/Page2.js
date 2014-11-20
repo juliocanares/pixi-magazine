@@ -74,3 +74,15 @@ APP.Page2.prototype.animationLinks = function () {
         TweenMax.to(this.play, 1, {alpha: 0, repeat: -1, yoyo: true});
     }, this)});
 };
+
+APP.Page2.prototype.instagramHandler = function () {
+    window.open('http://instagram.com/dcshoes_peru', "_blank")
+};
+
+APP.Page2.prototype.facebookHandler = function () {
+    window.open('https://www.facebook.com/DCShoesPeru?fref=ts', "_blank")
+};
+
+APP.Page2.prototype.playHandler = function () {
+    $(".swipebox-page2").trigger("click");
+};
