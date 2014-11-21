@@ -98,3 +98,12 @@ APP.Page8.prototype.imageFadeInOut = function (target, complete) {
     }});
 };
 
+
+APP.Page8.prototype.restart = function () {
+
+};
+
+APP.Page8.prototype.destroy = function () {
+    Util.removeAllChildrens(this, null);
+    Util.removeThis(this);
+};
