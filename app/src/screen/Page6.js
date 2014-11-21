@@ -98,3 +98,26 @@ APP.Page6.prototype.animIn = function (value) {
 APP.Page6.prototype.animationLinks = function () {
 
 };
+
+APP.Page6.prototype.instagramHandler = function () {
+
+};
+
+APP.Page6.prototype.facebookHandler = function () {
+
+};
+
+APP.Page6.prototype.endAnimationImages = function (i) {
+    if (i == 8) {
+        TweenMax.to(this.dcLogo.position, .3, { x: '-=64', ease: Cubic.easeInOut, onComplete: $.proxy(this.animationLinks, this)});
+        TweenMax.to(this.dcLogo, .3, { alpha: 1, ease: Cubic.easeInOut});
+        //TweenMax.to(this.border, .5, { delay: .2, alpha: 1, ease: Cubic.easeInOut});
+        TweenMax.to(this.footer, .5, { delay: .4, alpha: 1, ease: Cubic.easeInOut});
+    }
+};
+
+APP.Page6.prototype.destroy = function () {
+    Broadcaster.remove("LOAD_ASSETS_SCREEN_COMPLETE", this.onLoadAssetsScreenCompleteBind);
+    Util.removeAllChildrens(this, null);
+    Util.removeThis(this);
+};
