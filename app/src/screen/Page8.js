@@ -66,3 +66,35 @@ APP.Page8.prototype.buildView = function () {
 
     this.animIn();
 };
+
+APP.Page8.prototype.animIn = function () {
+
+    var animation = new TimelineMax({repeat: -1});
+    animation.to(this.image02, 0.1, {alpha: 1});
+    animation.to(this.image03, 0.1, {delay: 0.1, alpha: 1});
+    animation.to(this.image04, 0.1, {delay: 0.1, alpha: 1});
+    animation.to(this.image05, 0.1, {delay: 0.1, alpha: 1});
+    animation.to(this.image06, 0.1, {delay: 0.1, alpha: 1});
+    animation.play();
+
+    animation.timeScale(.8);
+    /*   this.imageFadeInOut(this.image01, $.proxy(function () {
+     this.imageFadeInOut(this.image02, $.proxy(function () {
+     TweenMax.to(this.image03, 1, {alpha: 1 ease: Cubic.easeInOut, onComplete: $.proxy(function () {
+     TweenMax.to(this.image03.position, 1, {delay: 1, y: "-=100", ease: Cubic.easeInOut});
+     TweenMax.to(this.image04, 1, {delay: 1, alpha: 1});
+     TweenMax.to(this.image04.position, 1, {delay: 1, y: stageH - this.image04.height + 15, ease: Cubic.easeInOut});
+     TweenMax.to(this.image05, 1, {delay: 1.3, alpha: 1});
+     TweenMax.to(this.image06, 1, {delay: 1.3, alpha: 1});
+
+     }, this)});
+     }, this));
+     }, this));*/
+};
+
+APP.Page8.prototype.imageFadeInOut = function (target, complete) {
+    TweenMax.to(target, 1, {alpha: 1, ease: Cubic.easeInOut, onComplete: function () {
+        TweenMax.to(target, 1, {delay: 2, alpha: 0, ease: Cubic.easeOut, onComplete: complete})
+    }});
+};
+
