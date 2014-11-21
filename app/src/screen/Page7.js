@@ -16,3 +16,50 @@ APP.Page7 = function () {
 
 APP.Page7.constructor = APP.Page7;
 APP.Page7.prototype = Object.create(APP.BasePage.prototype);
+
+APP.Page7.prototype.start = function () {
+    this.buildView();
+};
+
+APP.Page7.prototype.buildView = function () {
+
+    this.background = Util.createSpriteFromImage(this.getAsset("background.jpg"), 'background', false, null);
+    this.background.width = 1024;
+    this.background.height = 768;
+    this.addChild(this.background);
+
+    this.logo = Util.createSpriteFromImage(this.getAsset("logo.png"), 'logo', false, null);
+    this.logo.width = 255;
+    this.logo.height = 209;
+    this.logo.position = {x: stageW + 200, y: 15};
+    this.logo.alpha = 0;
+    this.addChild(this.logo);
+
+    this.text = Util.createSpriteFromImage(this.getAsset("text.png"), 'text', false, null);
+    this.text.width = 352;
+    this.text.height = 125;
+    this.text.position = {x: stageW + 200, y: 25};
+    this.text.alpha = 0;
+    this.addChild(this.text);
+
+    this.plusBindHandler = this.plusHandler.bind(this);
+    this.plus = Util.createSpriteFromImage(this.getAsset("plus-blue.png", "ui"), 'plus', true, this.plusBindHandler);
+    this.plus.position = {x: stageW + 200, y: 180};
+    this.plus.alpha = 0;
+    this.addChild(this.plus);
+
+    this.box = Util.createSpriteFromImage(this.getAsset("box.jpg"), 'box', false, null);
+    this.box.width = 1024;
+    this.box.height = 768;
+    this.addChild(this.box);
+
+    this.minusBindHandler = this.minusHandler.bind(this);
+    this.minus = Util.createSpriteFromImage(this.getAsset("minus-blue.png", "ui"), 'minus', true, this.minusBindHandler);
+    this.minus.width = this.minus.height = 63;
+    this.minus.position = {x: 1300, y: 1050};
+    this.box.addChild(this.minus);
+
+    this.box.alpha = 0;
+
+    this.animIn();
+};
