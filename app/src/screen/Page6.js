@@ -72,3 +72,29 @@ APP.Page6.prototype.buildView = function () {
     this.animIn();
 
 };
+
+APP.Page6.prototype.animIn = function (value) {
+    TweenMax.to(this.imagesContainer.getChildAt(2), .5, {alpha: 1, ease: Cubic.easeInOut});
+    TweenMax.to(this.imagesContainer.getChildAt(1), .5, {delay: .5, alpha: 1, ease: Cubic.easeInOut});
+    TweenMax.to(this.imagesContainer.getChildAt(0), .5, {delay: 1, alpha: 1, ease: Cubic.easeInOut});
+
+
+    TweenMax.to(this.imagesContainer.getChildAt(5), .5, {delay: 1.5, alpha: 1, ease: Cubic.easeInOut});
+    TweenMax.to(this.imagesContainer.getChildAt(4), .5, {delay: 2, alpha: 1, ease: Cubic.easeInOut});
+    TweenMax.to(this.imagesContainer.getChildAt(3), .5, {delay: 2.5, alpha: 1, ease: Cubic.easeInOut});
+
+    TweenMax.to(this.imagesContainer.getChildAt(8), .5, {delay: 3, alpha: 1, ease: Cubic.easeInOut});
+    TweenMax.to(this.imagesContainer.getChildAt(7), .5, {delay: 3.5, alpha: 1, ease: Cubic.easeInOut});
+    TweenMax.to(this.imagesContainer.getChildAt(6), .5, {delay: 4, alpha: 1, ease: Cubic.easeInOut, onComplete: $.proxy(function () {
+        TweenMax.to(this.dcLogo.position, .5, {x: 1024 - this.dcLogo.width});
+        TweenMax.to(this.dcLogo, .5, {alpha: 1});
+        TweenMax.to(this.footer, .5, {alpha: 1});
+
+        this.facebook.alpha = this.instagram.alpha = 1;
+
+    }, this)});
+};
+
+APP.Page6.prototype.animationLinks = function () {
+
+};
