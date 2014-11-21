@@ -76,3 +76,26 @@ APP.Page5.prototype.animIn = function () {
     }, this)});
 
 };
+
+APP.Page5.prototype.playHandler = function () {
+    $(".swipebox-page5").trigger("click");
+};
+
+APP.Page5.prototype.plusHandler = function () {
+    if (this.box.alpha == 0)
+        TweenMax.to(this.box, .5, {alpha: 1, ease: Cubic.easeInOut});
+};
+
+APP.Page5.prototype.minusHandler = function () {
+    TweenMax.to(this.box, .5, {alpha: 0, ease: Cubic.easeInOut});
+};
+
+APP.Page5.prototype.restart = function () {
+
+};
+
+
+APP.Page5.prototype.destroy = function () {
+    Util.removeAllChildrens(this, null);
+    Util.removeThis(this);
+};
