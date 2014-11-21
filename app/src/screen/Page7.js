@@ -63,3 +63,14 @@ APP.Page7.prototype.buildView = function () {
 
     this.animIn();
 };
+
+APP.Page7.prototype.animIn = function () {
+    TweenMax.to(this.logo.position, .5, {x: 225, ease: Cubic.easeInOut});
+    TweenMax.to(this.logo, .5, {alpha: 1, ease: Cubic.easeInOut});
+
+    TweenMax.to(this.text.position, .5, {delay: .3, x: 525, ease: Cubic.easeInOut});
+    TweenMax.to(this.text, .5, {delay: .3, alpha: 1, ease: Cubic.easeInOut});
+
+    TweenMax.to(this.plus.position, .5, {delay: .6, x: 575, ease: Cubic.easeInOut});
+    TweenMax.to(this.plus, .5, {delay: .6, alpha: 1, ease: Cubic.easeInOut});
+};
