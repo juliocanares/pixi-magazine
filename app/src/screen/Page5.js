@@ -59,3 +59,20 @@ APP.Page5.prototype.buildView = function () {
 
     this.animIn();
 };
+
+APP.Page5.prototype.animIn = function () {
+    TweenMax.to(this.title.position, .5, {x: 50, ease: Cubic.easeInOut});
+    TweenMax.to(this.title, .5, {alpha: 1, ease: Cubic.easeInOut});
+
+    TweenMax.to(this.plus.position, .5, {delay: .3, x: 190, ease: Cubic.easeInOut});
+    TweenMax.to(this.plus, .5, {delay: .3, alpha: 1, ease: Cubic.easeInOut, onComplete: $.proxy(function () {
+        TweenMax.to(this.plus, 1, {alpha: 0, repeat: -1, yoyo: true});
+    }, this)});
+
+
+    TweenMax.to(this.play.position, .5, {delay: .6, x: 130, ease: Cubic.easeInOut});
+    TweenMax.to(this.play, .5, {delay: .6, alpha: 1, ease: Cubic.easeInOut, onComplete: $.proxy(function () {
+        TweenMax.to(this.play, 1, {alpha: 0, repeat: -1, yoyo: true});
+    }, this)});
+
+};
