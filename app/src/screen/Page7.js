@@ -74,3 +74,26 @@ APP.Page7.prototype.animIn = function () {
     TweenMax.to(this.plus.position, .5, {delay: .6, x: 575, ease: Cubic.easeInOut});
     TweenMax.to(this.plus, .5, {delay: .6, alpha: 1, ease: Cubic.easeInOut});
 };
+
+APP.Page7.prototype.playHandler = function () {
+    $(".swipebox-page7").trigger("click");
+};
+
+APP.Page7.prototype.plusHandler = function () {
+    if (this.box.alpha == 0)
+        TweenMax.to(this.box, .5, {alpha: 1, ease: Cubic.easeInOut});
+};
+
+APP.Page7.prototype.minusHandler = function () {
+    TweenMax.to(this.box, .5, {alpha: 0, ease: Cubic.easeInOut});
+};
+
+APP.Page7.prototype.restart = function () {
+
+};
+
+
+APP.Page7.prototype.destroy = function () {
+    Util.removeAllChildrens(this, null);
+    Util.removeThis(this);
+};
