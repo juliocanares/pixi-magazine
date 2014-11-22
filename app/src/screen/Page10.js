@@ -91,3 +91,15 @@ APP.Page10.prototype.buildView = function () {
 
     this.addChild(this.instagram);
 };
+
+APP.Page10.prototype.animIn = function (value) {
+
+};
+APP.Page10.prototype.endAnimationImages = function (i) {
+    if (i == 8) {
+        TweenMax.to(this.dcLogo.position, .3, { x: '-=64', ease: Cubic.easeInOut, onComplete: $.proxy(this.animationLinks, this)});
+        TweenMax.to(this.dcLogo, .3, { alpha: 1, ease: Cubic.easeInOut});
+        //TweenMax.to(this.border, .5, { delay: .2, alpha: 1, ease: Cubic.easeInOut});
+        TweenMax.to(this.footer, .5, { delay: .4, alpha: 1, ease: Cubic.easeInOut});
+    }
+};
