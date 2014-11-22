@@ -1,0 +1,516 @@
+html, body {
+    height: 100%;
+    background-color: #000;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden
+}
+
+.nav-top {
+    position: absolute;
+    background-color: #232323;
+    z-index: 250;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+}
+
+.pageNumbers {
+    text-align: center;
+    color: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+    width: 180px;
+    height: 100%;
+}
+
+.control {
+    float: left;
+    height: 35px;
+    width: 50px;
+}
+
+#pageNumbers {
+    height: 100%;
+    width: 80px;
+    float: left;
+    font-weight: 700;
+}
+
+#xOfy {
+    top: 9px;
+    position: relative;
+}
+
+#leftControl:hover, #leftControl:focus {
+    background: url(../img/ui/leftarrowon-indx.png) no-repeat;
+}
+
+#leftControl {
+    background: url(../img/ui/leftarrow-indx.png) no-repeat;
+}
+
+#rightControl:hover, #leftControl:focus {
+    background: url(../img/ui/rightarrowon-indx.png) no-repeat;
+}
+
+#rightControl {
+    background: url(../img/ui/rightarrow-indx.png) no-repeat;
+}
+
+.popOverContainer {
+    top: 35px;
+    position: absolute;
+    width: 250px;
+    z-index: 1000;
+    display: none;
+}
+
+.nav-top {
+    position: absolute;
+    background-color: #232323;
+    z-index: 250;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+}
+
+.pageNumbers {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 180px;
+    height: 100%;
+}
+
+.control {
+    float: left;
+    height: 35px;
+    width: 50px;
+}
+
+#pageNumbers {
+    height: 100%;
+    width: 80px;
+    float: left;
+    font-weight: 700;
+}
+
+#xOfy {
+    top: 9px;
+    position: relative;
+}
+
+#leftControl:hover, #leftControl:focus {
+    background: url(../img/ui/leftarrowon-indx.png) no-repeat;
+}
+
+#leftControl {
+    background: url(../img/ui/leftarrow-indx.png) no-repeat;
+}
+
+#rightControl:hover, #leftControl:focus {
+    background: url(../img/ui/rightarrowon-indx.png) no-repeat;
+}
+
+#rightControl {
+    background: url(../img/ui/rightarrow-indx.png) no-repeat;
+}
+
+.btn-thumb-vertical {
+    position: absolute;
+    top: 0;
+    width: 45px;
+    height: 42px;
+    right: 84px;
+    cursor: pointer;
+    z-index: 100;
+    display: block !important;
+}
+
+.btn-info {
+    position: absolute;
+    top: 0;
+    width: 45px;
+    height: 42px;
+    right: 170px;
+    cursor: pointer;
+    z-index: 100;
+    display: block !important;
+}
+
+.btn-list {
+    position: absolute;
+    top: 0;
+    width: 45px;
+    height: 42px;
+    right: 210px;
+    cursor: pointer;
+    z-index: 100;
+    display: block !important;
+}
+
+.popOverContainer {
+    top: 40px;
+    position: absolute;
+    width: 250px;
+    z-index: 1000;
+    display: none;
+}
+
+.popOverContainer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.popOver {
+    position: relative;
+}
+
+.popOverTitle {
+    height: 40px;
+    line-height: 40px;
+    text-align: left;
+    color: #fff;
+    background-color: #a32329;
+    padding-left: 10px;
+    border-top: 1px solid #ae1f1f;
+}
+
+#morePopOver #popOverContent {
+    height: 174px;
+}
+
+.content.info {
+    height: 174px;
+    border: 0;
+    padding: 55px 0 30px;
+}
+
+#morePopOver .popOverFooter {
+    height: 47px;
+    color: #fff;
+}
+
+.popOverFooter {
+    background-color: #262626;
+    width: 100%;
+    height: 4px;
+}
+
+.content.feedback {
+    background-color: #262626;
+    border: 0;
+}
+
+.content {
+    background-color: #eee;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-bottom: 1px solid #d9d9d9;
+    font-weight: 700;
+}
+
+.content.feedback .logo {
+    width: 28px;
+    background-image: url(../img/ui/envelope.png);
+    background-size: 26px 17px;
+}
+
+.content .logo {
+    position: absolute;
+    right: 0;
+    height: 44px;
+    padding-right: 22px;
+    background-size: 28px 28px;
+    background: no-repeat center center;
+}
+
+#scrollbar2 {
+    width: 100%;
+    height: 100%;
+    clear: both;
+    margin: 0;
+}
+
+#contents {
+    padding: 0;
+    margin: 0;
+}
+
+#scrollbar2 .content {
+    cursor: pointer;
+    list-style: none;
+    padding-left: 15px;
+}
+
+#scrollbar2 .overview {
+    list-style: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+#scrollbar2 .viewport {
+    width: 250px;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    float: left;
+}
+
+.content .text {
+    text-align: left;
+    white-space: nowrap;
+    max-width: 260px;
+    overflow: hidden;
+    height: 44px;
+    float: left;
+}
+
+#contents .num {
+    position: absolute;
+    right: 0;
+    padding-right: 22px;
+}
+
+.popOver {
+    position: relative;
+}
+
+.popOverTitle {
+    height: 40px;
+    line-height: 40px;
+    text-align: left;
+    color: #fff;
+    background-color: #262626;
+    padding-left: 10px;
+    border-top: 1px solid #525252;
+}
+
+#morePopOver #popOverContent {
+    height: 174px;
+}
+
+.content.info {
+    height: 174px;
+    border: 0;
+}
+
+.content {
+    background-color: #eee;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    height: 44px;
+    line-height: 44px;
+    padding-left: 22px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-bottom: 1px solid #d9d9d9;
+    font-weight: 700;
+}
+
+#morePopOver .popOverFooter {
+    height: 47px;
+    color: #fff;
+}
+
+.popOverFooter {
+    background-color: #262626;
+    width: 100%;
+    height: 4px;
+}
+
+/*Scrollbar 1*/
+.btn-minislider {
+    width: 201px;
+    height: 45px;
+    z-index: 900;
+    background: url(../img/gallery/contentsbutton.png) no-repeat;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+
+.navegador {
+    width: 100%;
+    position: absolute;
+    z-index: 100;
+    left: 0;
+    bottom: -126px;
+    height: 173px;
+}
+
+#scrollbar1 {
+    width: 100%;
+    height: 173px;
+    clear: both;
+    margin: 0;
+    z-index: 100;
+}
+
+#scrollbar1 .viewport {
+    width: 100%;
+    height: 148px;
+    overflow: hidden;
+    position: relative;
+    clear: both;
+}
+
+#scrollbar1 ul {
+    padding: 0;
+    margin-top: 10px;
+}
+
+#scrollbar1 ul {
+    list-style: none inside none;
+}
+
+.thumbWrapper {
+    width: 142px;
+    margin: 0 4px;
+    float: left;
+    height: 126px;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.thumbWrapper > img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+.bg-navegation {
+    background-color: #000000;
+    height: 173px;
+}
+
+/*scrollbar2*/
+.btn-thumb-vertical {
+    position: absolute;
+    top: 0;
+    width: 45px;
+    height: 42px;
+    right: 84px;
+    cursor: pointer;
+    z-index: 100;
+    display: block !important;
+}
+
+.btn-thumb-info {
+    position: absolute;
+    top: 0;
+    width: 45px;
+    height: 42px;
+    right: 170px;
+    cursor: pointer;
+    z-index: 100;
+    display: block !important;
+}
+
+.grid {
+    height: auto;
+    display: none;
+    background-color: #0c0c0c;
+    position: absolute;
+    left: 0;
+    top: 40px;
+    z-index: 150;
+    width: 100%;
+    bottom: 0;
+}
+
+.gridWrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: auto;
+    width: auto;
+}
+
+#scrollbar3 {
+    width: 100%;
+    height: 100%;
+    padding: 10px 0;
+    clear: both;
+    margin: 0;
+}
+
+#scrollbar3 .viewport {
+    width: 96%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#tiles {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#tiles li {
+    height: 100%;
+    overflow: hidden;
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+}
+
+#tiles > li > .thumbnail {
+    background-color: transparent;
+    height: 190px;
+    min-width: 115px;
+    overflow: hidden;
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    color: #fff;
+    border: 0;
+    padding-right: 10px;
+    font-weight: 700;
+}
+
+#tiles > li > .thumbnail p {
+    font-size: 10px;
+    margin: 0;
+}
+
+#tiles > li > .thumbnail img {
+    float: left;
+    height: 140px;
+    max-width: 100%;
+    width: auto;
+    margin: 10px 0;
+}
+
+.clear {
+    clear: both;
+}
