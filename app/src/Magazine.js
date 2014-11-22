@@ -16,11 +16,15 @@ APP.Magazine = function () {
     this.renderer.view.style.position = "absolute";
     this.renderer.view.style.top = "0";
     this.renderer.view.style.left = "0";
+
+    new APP.SceneModel();
 };
 
 APP.Magazine.prototype = Object.create(Object.prototype);
+
 
 APP.Magazine.prototype.update = function () {
     requestAnimationFrame(this.update.bind(this));
     this.renderer.render(this.stage)
 };
+
