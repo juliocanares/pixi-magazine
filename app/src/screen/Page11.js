@@ -75,6 +75,38 @@ APP.Page11.prototype.animIn = function () {
     TweenMax.to(this.logo, 1, {alpha: 1, ease: Cubic.easeInOut});
 };
 
+APP.Page11.prototype.selectorHandler = function (e) {
+    this.currentSelector = e.target.box;
+
+    if (this.oldSelector != null && this.oldSelector != this.currentSelector)
+        TweenMax.to(this.oldSelector, .5, {alpha: 0});
+    if (this.currentSelector.alpha == 0)
+        TweenMax.to(this.currentSelector, .5, {delay: .4, alpha: 1})
+
+    this.oldSelector = this.currentSelector;
+};
+
+APP.Page11.prototype.showBox = function () {
+
+};
+
+
+APP.Page11.prototype.hideBox = function () {
+
+};
+
+APP.Page11.prototype.plusHandler = function () {
+    if (this.box.alpha == 0)
+        TweenMax.to(this.box, .5, {alpha: 1, ease: Cubic.easeInOut});
+};
+
+APP.Page11.prototype.minusHandler = function () {
+    TweenMax.to(this.box, .5, {alpha: 0, ease: Cubic.easeInOut});
+};
+
+APP.Page11.prototype.restart = function () {
+
+};
 
 
 APP.Page11.prototype.destroy = function () {
