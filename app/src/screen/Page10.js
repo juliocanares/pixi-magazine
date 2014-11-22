@@ -95,6 +95,24 @@ APP.Page10.prototype.buildView = function () {
 APP.Page10.prototype.animIn = function (value) {
 
 };
+
+APP.Page10.prototype.youtubeHandler = function () {
+    window.open('https://www.youtube.com/user/DAKINEOriginal', "_blank");
+};
+
+APP.Page10.prototype.instagramHandler = function () {
+    window.open('http://instagram.com/dakinenews', "_blank")
+};
+
+APP.Page10.prototype.twitterHandler = function () {
+    window.open('https://twitter.com/dakinenews', "_blank");
+
+};
+
+APP.Page10.prototype.facebookHandler = function () {
+    window.open('https://www.facebook.com/dakineperu?fref=ts', "_blank")
+};
+
 APP.Page10.prototype.endAnimationImages = function (i) {
     if (i == 8) {
         TweenMax.to(this.dcLogo.position, .3, { x: '-=64', ease: Cubic.easeInOut, onComplete: $.proxy(this.animationLinks, this)});
@@ -102,4 +120,10 @@ APP.Page10.prototype.endAnimationImages = function (i) {
         //TweenMax.to(this.border, .5, { delay: .2, alpha: 1, ease: Cubic.easeInOut});
         TweenMax.to(this.footer, .5, { delay: .4, alpha: 1, ease: Cubic.easeInOut});
     }
+};
+
+APP.Page10.prototype.destroy = function () {
+    Broadcaster.remove("LOAD_ASSETS_SCREEN_COMPLETE", this.onLoadAssetsScreenCompleteBind);
+    Util.removeAllChildrens(this, null);
+    Util.removeThis(this);
 };
