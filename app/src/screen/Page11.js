@@ -69,3 +69,15 @@ APP.Page11.prototype.buildView = function () {
 
     this.animIn();
 };
+
+APP.Page11.prototype.animIn = function () {
+    TweenMax.to(this.logo.position, 1, {x: 135, ease: Cubic.easeInOut});
+    TweenMax.to(this.logo, 1, {alpha: 1, ease: Cubic.easeInOut});
+};
+
+
+
+APP.Page11.prototype.destroy = function () {
+    Util.removeAllChildrens(this, null);
+    Util.removeThis(this);
+};
