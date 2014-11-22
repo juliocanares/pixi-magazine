@@ -73,3 +73,46 @@ APP.Page9.prototype.buildView = function () {
 
     this.animIn();
 };
+
+APP.Page9.prototype.animIn = function () {
+
+};
+
+APP.Page9.prototype.selectorHandler = function (e) {
+    this.currentSelector = e.target.box;
+
+    if (this.oldSelector != null && this.oldSelector != this.currentSelector)
+        TweenMax.to(this.oldSelector, .5, {alpha: 0});
+    if (this.currentSelector.alpha == 0)
+        TweenMax.to(this.currentSelector, .5, {delay: .4, alpha: 1})
+
+    this.oldSelector = this.currentSelector;
+};
+
+APP.Page9.prototype.showBox = function () {
+
+};
+
+
+APP.Page9.prototype.hideBox = function () {
+
+};
+
+APP.Page9.prototype.plusHandler = function () {
+    if (this.box.alpha == 0)
+        TweenMax.to(this.box, .5, {alpha: 1, ease: Cubic.easeInOut});
+};
+
+APP.Page9.prototype.minusHandler = function () {
+    TweenMax.to(this.box, .5, {alpha: 0, ease: Cubic.easeInOut});
+};
+
+APP.Page9.prototype.restart = function () {
+
+};
+
+
+APP.Page9.prototype.destroy = function () {
+    Util.removeAllChildrens(this, null);
+    Util.removeThis(this);
+};
