@@ -5,13 +5,263 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
   <meta charset="utf-8"/>
-  
+
   <link rel="stylesheet" href="css/vendor/swipebox.css">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/vendor/customscrollbar.css"/>
 </head>
 <body>
 
+
+<div id="fb-root"></div>
+
+<div class="nav-top">
+    <div class="pageNumbers">
+        <div id="leftControl" class="control"></div>
+        <div id="pageNumbers" class="pageNumber">
+            <div id="xOfy">1</div>
+        </div>
+        <div id="rightControl" class="control"></div>
+    </div>
+    <img class="btn-thumb-vertical" src="img/ui/grid.png" alt=""/>
+    <img class="btn-info" src="img/ui/info.png" alt=""/>
+    <img class="btn-list" src="img/ui/content.png" alt=""/>
+</div>
+
+<a class="swipebox-page2" title="DC SHOES PERÚ – ÁNGELO CARO" rel="youtube"
+   href="http://www.youtube.com/watch?v=4oJ2jn_53GI"></a>
+<a class="swipebox-page5" title="Balaram – De Col - Wilson en el norte peruano." rel="youtube"
+   href="http://vimeo.com/86706363"></a>
+
+<div class="popOverContainer" id="morePopOver" style="right: 168px;">
+    <div class="popOver">
+        <div class="popOverTitle">
+            INFO
+        </div>
+        <div id="popOverContent">
+            <div class="content info">
+                <img src="img/ui/fish.png"/>
+            </div>
+        </div>
+        <div class="popOverFooter">
+            <div class="content feedback">
+                <a id="feedback" href="">Enviar FeedBack <img src="img/ui/envelope.png" alt=""/></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="popOverContainer" id="contentsListPopOver" style="right: 207px;">
+    <div class="popOver">
+        <div class="popOverTitle">LISTA DE CONTENIDO</div>
+        <div id="popOverContent" style="height: 480px;">
+            <div id="scrollbar2">
+                <div class="viewport noscroll">
+                    <div class="overview" style="top: 0px;">
+                        <ul style="text-align:center;width:100%; padding: 0;margin: 0;" id="contents">
+                            <li class="content" page="1">
+                                <div class="text">Página 1</div>
+                            <li class="content" page="2">
+                                <div class="text">Página 2</div>
+                            <li class="content" page="3">
+                                <div class="text">Página 3</div>
+                            <li class="content" page="4">
+                                <div class="text">Página 4</div>
+                            <li class="content" page="5">
+                                <div class="text">Página 5</div>
+                            <li class="content" page="6">
+                                <div class="text">Página 6</div>
+                            <li class="content" page="7">
+                                <div class="text">Página 7</div>
+                            <li class="content" page="8">
+                                <div class="text">Página 8</div>
+                            <li class="content" page="9">
+                                <div class="text">Página 9</div>
+                            <li class="content" page="10">
+                                <div class="text">Página 10</div>
+                            <li class="content" page="11">
+                                <div class="text">Página 11</div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popOverFooter">
+        </div>
+    </div>
+</div>
+
+<div class="navegador">
+    <div class="btn-minislider"></div>
+    <div class="bg-navegation">
+        <div id="scrollbar1">
+            <div class="viewport">
+                <ul>
+                    <li class="thumbWrapper">
+                        <img src="img/gallery/page1.jpg" alt=""/>
+                        <span>1</span>
+                    </li>
+                    <li class="thumbWrapper">
+                        <img src="img/gallery/page2.jpg" alt=""/>
+                        <span>2</span>
+                    </li>
+                    <li class="thumbWrapper">
+                        <img src="img/gallery/page3.jpg" alt=""/>
+                        <span>3</span>
+                    </li>
+                    <li class="thumbWrapper">
+                        <img src="img/gallery/page4.jpg" alt=""/>
+                        <span>4</span>
+                    </li>
+                    <li class="thumbWrapper">
+                        <img src="img/gallery/page5.jpg" alt=""/>
+                        <span>5</span>
+                    </li>
+                    <li class="thumbWrapper">
+                        <img src="img/gallery/page6.jpg" alt=""/>
+                        <span>6</span>
+                    </li>
+                    <li class="thumbWrapper">
+                        <img src="img/gallery/page7.jpg" alt=""/>
+                        <span>7</span>
+                    </li>
+                    <li class="thumbWrapper">
+                        <img src="img/gallery/page8.jpg" alt=""/>
+                        <span>8</span>
+                    </li>
+                    <li class="thumbWrapper">
+                        <img src="img/gallery/page9.jpg" alt=""/>
+                        <span>9</span>
+                    </li>
+                    <li class="thumbWrapper">
+                        <img src="img/gallery/page10.jpg" alt=""/>
+                        <span>10</span>
+                    </li>
+                    <li class="thumbWrapper">
+                        <img src="img/gallery/page11.jpg" alt=""/>
+                        <span>11</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="grid" id="grid">
+    <div class="gridWrapper">
+        <div id="scrollbar3">
+            <div class="viewport">
+                <ul id="tiles">
+                    <li class="gridPage">
+                        <div class="thumbnail">
+                            <img src="img/gallery/page1.jpg" alt=""/>
+
+                            <div class="clear"></div>
+                            <p>1</p>
+
+                            <div class="clear"></div>
+                        </div>
+                    </li>
+                    <li class="gridPage">
+                        <div class="thumbnail">
+                            <img src="img/gallery/page2.jpg" alt=""/>
+
+                            <div class="clear"></div>
+                            <p>2</p>
+
+                            <div class="clear"></div>
+                        </div>
+                    </li>
+                    <li class="gridPage">
+                        <div class="thumbnail">
+                            <img src="img/gallery/page3.jpg" alt=""/>
+
+                            <p>3</p>
+
+                            <div class="clear"></div>
+                        </div>
+                    </li>
+                    <li class="gridPage">
+                        <div class="thumbnail">
+                            <img src="img/gallery/page4.jpg" alt=""/>
+
+                            <div class="clear"></div>
+                            <p>4</p>
+
+                            <div class="clear"></div>
+                        </div>
+                    </li>
+                    <li class="gridPage">
+                        <div class="thumbnail">
+                            <img src="img/gallery/page5.jpg" alt=""/>
+
+                            <p>5</p>
+
+                            <div class="clear"></div>
+                        </div>
+                    </li>
+                    <li class="gridPage">
+                        <div class="thumbnail">
+                            <img src="img/gallery/page6.jpg" alt=""/>
+
+                            <p>6</p>
+
+                            <div class="clear"></div>
+                        </div>
+                    </li>
+                    <li class="gridPage">
+                        <div class="thumbnail">
+                            <img src="img/gallery/page7.jpg" alt=""/>
+
+                            <p>7</p>
+
+                            <div class="clear"></div>
+                        </div>
+                    </li>
+                    <li class="gridPage">
+                        <div class="thumbnail">
+                            <img src="img/gallery/page8.jpg" alt=""/>
+
+                            <div class="clear"></div>
+                            <p>8</p>
+
+                            <div class="clear"></div>
+                        </div>
+                    </li>
+                    <li class="gridPage">
+                        <div class="thumbnail">
+                            <img src="img/gallery/page9.jpg" alt=""/>
+
+                            <p>9</p>
+
+                            <div class="clear"></div>
+                        </div>
+                    </li>
+                    <li class="gridPage">
+                        <div class="thumbnail">
+                            <img src="img/gallery/page10.jpg" alt=""/>
+
+                            <div class="clear"></div>
+                            <p>10</p>
+
+                            <div class="clear"></div>
+                        </div>
+                    </li>
+                    <li class="gridPage">
+                        <div class="thumbnail">
+                            <img src="img/gallery/page11.jpg" alt=""/>
+
+                            <p>11</p>
+
+                            <div class="clear"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script src="js/vendor/jquery.js"></script>
 <script src="js/vendor/swipebox.js"></script>
