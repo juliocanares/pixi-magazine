@@ -62,6 +62,14 @@ APP.Magazine.prototype.swipeRightHandler = function () {
     this.screenManager.swipeRightHandler();
 };
 
+APP.Magazine.prototype.resize = function () {
+    this.renderer.resize(stageW, stageH);
+
+    this.headerManager.resize();
+    this.screenManager.resize();
+    this.arrowsManager.resize();
+    this.footerManager.resize();
+};
 
 
 APP.Magazine.prototype.update = function () {
