@@ -32,12 +32,27 @@ APP.Magazine = function () {
     this.stage.addChild(this.arrowsManager);
     this.stage.addChild(this.footerManager);
 
- 
+    this.hammerParams = {'swipe_velocity': 0.01};
+    this.hammer = new Hammer(document.body, this.hammerParams);
+
+    this.listeners();
 
     requestAnimationFrame(this.update.bind(this));
 };
 
 APP.Magazine.prototype = Object.create(Object.prototype);
+APP.Magazine.prototype.listeners = function () {
+
+    this.swipeLeftHandlerBind = this.swipeLeftHandler.bind(this);
+    this.swipeRightHandlerBind = this.swipeRightHandler.bind(this);
+
+    this.hammer.on('swipeleft', this.swipeLeftHandlerBind);
+    this.hammer.on('swiperight', this.swipeRightHandlerBind);
+
+    this.arrowsManager.leftArrow.click = this.swipeRightHandlerBind;
+    this.arrowsManager.rightArrow.click = this.swipeLeftHandlerBind;
+
+};
 
 
 
