@@ -54,6 +54,14 @@ APP.Magazine.prototype.listeners = function () {
 
 };
 
+APP.Magazine.prototype.swipeLeftHandler = function () {
+    this.screenManager.swipeLeftHandler();
+};
+
+APP.Magazine.prototype.swipeRightHandler = function () {
+    this.screenManager.swipeRightHandler();
+};
+
 
 
 APP.Magazine.prototype.update = function () {
