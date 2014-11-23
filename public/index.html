@@ -297,7 +297,7 @@
 
     $(document).ready(onReady);
     $(window).resize(onResize);
-    
+
      function onReady() {
         stageWBase = 1024;
         stageHBase = 768 + stageOffSetY;
@@ -307,6 +307,86 @@
         onSwipeBox();
 
         start();
+    }
+
+    function start() {
+        $('.navegador').hover(function () {
+            $(this).stop().delay(600).animate({
+                bottom: 45
+            }, 800);
+        }, function () {
+            $(this).stop().animate({
+                bottom: -126
+            }, 500);
+        });
+        $('.btn-info').click(function () {
+            $('#contentsListPopOver').hide();
+            $('#morePopOver').toggle();
+        });
+        $('.btn-list').click(function () {
+            $('#morePopOver').hide();
+            $('#contentsListPopOver').toggle();
+        });
+        $('.btn-thumb-vertical').click(function () {
+            $('#grid').toggle();
+        });
+        /*Click*/
+        var scrollbar1_li = $('#scrollbar1').find('li');
+        var scrollbar2_li = $('#scrollbar2').find('li');
+        var scrollbar3_li = $('#scrollbar3').find('li');
+
+        scrollbar1_li.click(function () {
+            $('.navegador').stop().delay(400).animate({
+                bottom: -126
+            }, 300);
+
+            var page = $(this).text();
+
+            APP.Magazine.instance.screenManager.currentScreenID = page - 1;
+
+            $('#xOfy').text(page);
+        });
+        scrollbar3_li.click(function () {
+            var page = $(this).text();
+
+            APP.Magazine.instance.screenManager.currentScreenID = page - 1;
+
+            $('#grid').toggle();
+
+
+            $('#xOfy').text(page);
+            $('#grid').slideUp;
+        });
+
+        scrollbar2_li.click(function () {
+            var page = $(this).attr('page');
+            $('#xOfy').text(page);
+
+            APP.Magazine.instance.screenManager.currentScreenID = page - 1;
+
+            $('.popOverContainer').hide();
+        });
+
+        $('#leftControl').click(function () {
+            APP.Magazine.instance.screenManager.currentScreenID--;
+        });
+
+        $('#rightControl').click(function () {
+            APP.Magazine.instance.screenManager.currentScreenID++;
+        });
+
+
+        $("#scrollbar1").mCustomScrollbar({
+            horizontalScroll: true,
+            scrollInertia: 250
+        });
+
+
+        $("#scrollbar3 .viewport").mCustomScrollbar({
+            advanced: {
+                updateOnContentResize: true
+            }
+        });
     }
 </script>
 </body>
