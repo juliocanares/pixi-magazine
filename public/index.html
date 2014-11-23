@@ -298,6 +298,16 @@
     $(document).ready(onReady);
     $(window).resize(onResize);
     
+     function onReady() {
+        stageWBase = 1024;
+        stageHBase = 768 + stageOffSetY;
+        onResize();
+        app = new APP.Magazine();
+        onResize();
+        onSwipeBox();
+
+        start();
+    }
 </script>
 </body>
 </html>
