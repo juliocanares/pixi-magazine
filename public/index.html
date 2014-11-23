@@ -393,6 +393,13 @@
         $(".swipebox-page5").swipebox();
     }
 
+    function onResize() {
+
+        stageW = window.innerWidth;
+        stageH = window.innerHeight - 47;
+
+        if (app)app.resize();
+    }
 </script>
 </body>
 </html>
