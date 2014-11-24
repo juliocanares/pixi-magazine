@@ -1,19 +1,16 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-    <title>Magazine</title>
+	<title>Magazine</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta charset="utf-8"/>
 
-    <link rel="stylesheet" href="css/lib/swipebox.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/lib/customscrollbar.css"/>
-
+  <link rel="stylesheet" href="css/vendor/swipebox.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/vendor/customscrollbar.css"/>
 </head>
 <body>
-
-<div id="fb-root"></div>
 
 <div class="nav-top">
     <div class="pageNumbers">
@@ -262,28 +259,18 @@
         </div>
     </div>
 </div>
-<script>(function (d, s, id) {
-    var js;
-    var fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s);
-    js.id = id;
-    js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=470740003030244";
-    fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
 
-<script src="js/lib/jquery.js"></script>
-<script src="js/lib/swipebox.js"></script>
-<script src="js/lib/broadcaster.js"></script>
-<script src="js/lib/tweenmax.js"></script>
-<script src="js/lib/pixi.js"></script>
-<script src="js/lib/hammer.js"></script>
-<script src="js/bin/game.min.js"></script>
-<script src="js/lib/customscrollbar.js"></script>
-
+<script src="js/vendor/jquery.js"></script>
+<script src="js/vendor/swipebox.js"></script>
+<script src="js/vendor/broadcaster.js"></script>
+<script src="js/vendor/tweenmax.js"></script>
+<script src="js/vendor/pixi.js"></script>
+<script src="js/vendor/hammer.js"></script>
+<script src="js/vendor/customscrollbar.js"></script>
+<script src="js/app.min.js"></script>
 
 <script>
-    var app;
+		var app;
 
     var stageW;
     var stageH;
@@ -297,7 +284,7 @@
     $(document).ready(onReady);
     $(window).resize(onResize);
 
-    function onReady() {
+     function onReady() {
         stageWBase = 1024;
         stageHBase = 768 + stageOffSetY;
         onResize();
@@ -387,7 +374,6 @@
             }
         });
     }
-
     function onSwipeBox() {
         $(".swipebox-page2").swipebox();
         $(".swipebox-page5").swipebox();
