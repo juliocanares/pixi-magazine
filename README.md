@@ -1,8 +1,17 @@
 How to build
 
-Static server is build with Node.js and express.js. If you don't already have this, go to install Node and NPM then install the express dependency running.
+Pixi Magazine is build on top of [static server](https://github.com/juliocanares/static-server) that run
+an node.js server to serve the application.
+
+You need to have [node.js and npm](https://nodejs.org/en/) installed to run the project also you need
+[grunt.js](http://gruntjs.com/)  to run the tasks , we you are already go to install all the dependencies
+running.
 
 ```sudo npm install```
+
+Now you need to run grunt, just go to root of the project and run
+
+``` grunt ```
 
 Then, you will be able to run the server with the next command 
 
