@@ -3,7 +3,7 @@
 [demo](http://www.juliocanares.com/lab/init/html5/web/revista/)
 
 Pixi Magazine is build on top of [static server](https://github.com/juliocanares/static-server) that run
-an node.js server to serve the application.
+a node.js server to run the application.
 
 ![Magazine](https://pbs.twimg.com/media/COjMxjXUYAAQiOA.jpg)
 
