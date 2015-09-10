@@ -1,7 +1,11 @@
-How to build
+#How to build
+
+[demo](http://www.juliocanares.com/lab/init/html5/web/revista/)
 
 Pixi Magazine is build on top of [static server](https://github.com/juliocanares/static-server) that run
 an node.js server to serve the application.
+
+![Magazine](https://pbs.twimg.com/media/COjMxjXUYAAQiOA.jpg)
 
 You need to have [node.js and npm](https://nodejs.org/en/) installed to run the project also you need
 [grunt.js](http://gruntjs.com/)  to run the tasks , we you are already go to install all the dependencies
